@@ -1,3 +1,3 @@
 #!/bin/bash
 
-pipenv run python src/main.py -c config/application_name_app_config.json
+pipenv run python3.12 src/main.py -c config/application_name_app_config.json
