@@ -2,7 +2,7 @@
 
 import logging
 import logging.handlers
-from Music_and_Streaming_Playlist_System.settings import Settings
+from Music_Streaming_Playlist_System.settings import Settings
 import os
 
 class LoggingService():

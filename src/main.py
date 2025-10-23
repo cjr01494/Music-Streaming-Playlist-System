@@ -2,7 +2,7 @@
 
 import json
 from argparse import ArgumentParser
-from Music_and_Streaming_Playlist_System.presentation_layer.user_interface import UserInterface
+from Music_Streaming_Playlist_System.presentation_layer.user_interface import UserInterface
 
 
 

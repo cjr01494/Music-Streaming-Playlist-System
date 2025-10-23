@@ -1,7 +1,7 @@
 """Implements AppServices Class."""
 
-from application_name.application_base import ApplicationBase
-from application_name.persistence_layer.mysql_persistence_wrapper import MySQLPersistenceWrapper
+from Music_Streaming_Playlist_System.application_base import ApplicationBase
+from Music_Streaming_Playlist_System.persistence_layer.mysql_persistence_wrapper import MySQLPersistenceWrapper
 import inspect
 
 class AppServices(ApplicationBase):

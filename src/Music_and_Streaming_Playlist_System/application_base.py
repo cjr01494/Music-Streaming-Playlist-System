@@ -1,8 +1,8 @@
 """Implements behavior common to all application classes.."""
 
 from abc import ABC, abstractmethod
-from Music_and_Streaming_Playlist_System.logging import LoggingService
-from Music_and_Streaming_Playlist_System.settings import Settings
+from Music_Streaming_Playlist_System.logging import LoggingService
+from Music_Streaming_Playlist_System.settings import Settings
 
 class ApplicationBase(ABC):
     """Implements ApplicationBase class."""

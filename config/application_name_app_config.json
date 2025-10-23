@@ -1,8 +1,8 @@
 {
 	"meta":{
 		"version": "v1",
-		"app_name": "Music and Streaming Playlist System",
-		"log_prefix": "Music_and_Streaming_Playlist_System"
+		"app_name": "Music_Streaming_Playlist_System",
+		"log_prefix": "Music_Streaming_Playlist_System"
 	},
 	"database":{
 		"pool":{

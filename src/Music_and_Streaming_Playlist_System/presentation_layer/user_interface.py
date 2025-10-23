@@ -1,7 +1,7 @@
 """Implements the applicatin user interface."""
 
-from Music_and_Streaming_Playlist_System.application_base import ApplicationBase
-from Music_and_Streaming_Playlist_System.service_layer.app_services import AppServices
+from Music_Streaming_Playlist_System.application_base import ApplicationBase
+from Music_Streaming_Playlist_System.service_layer.app_services import AppServices
 import inspect
 import json
 

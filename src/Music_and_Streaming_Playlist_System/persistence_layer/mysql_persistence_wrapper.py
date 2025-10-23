@@ -1,6 +1,6 @@
 """Defines the MySQLPersistenceWrapper class."""
 
-from Music_and_Streaming_Playlist_System.application_base import ApplicationBase
+from Music_Streaming_Playlist_System.application_base import ApplicationBase
 from mysql import connector
 from mysql.connector.pooling import (MySQLConnectionPool)
 import inspect
