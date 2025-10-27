@@ -26,7 +26,7 @@ def configure_and_parse_commandline_arguments():
 	parser = ArgumentParser(
 	prog='main.py',
 	description='Start the application with a configuration file.',
-	epilog='POC: Your Name | your@email')
+	epilog='POC: Cara Rocha-Ortanez | cjr01494@marymount.edu')
 
 	parser.add_argument('-c','--configfile',
 					help="Configuration file to load.",

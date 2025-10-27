@@ -6,7 +6,7 @@
 	},
 	"database":{
 		"pool":{
-			"name": "app_name_db_bool",
+			"name": "Music_Streaming_Playlist_System_db_bool",
 			"size": 10,
 			"reset_session": true
 		},
