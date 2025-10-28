@@ -34,6 +34,7 @@ class MySQLPersistenceWrapper(ApplicationBase):
 		
 
 		# SQL String Constants
+		
 
 
 

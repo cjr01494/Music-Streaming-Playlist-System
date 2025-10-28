@@ -15,8 +15,7 @@
 				"database": "music_db",
 				"user": "cjortanez",
 				"host": "localhost",
-				"port": 8889,
-				"password": ""
+				"port": 8889
 			}
 		}
 	}
