@@ -2,7 +2,7 @@
 	"meta":{
 		"version": "v1",
 		"app_name": "Music_Streaming_Playlist_System",
-		"log_prefix": "Music_Streaming_Playlist_System"
+		"log_prefix": "music_app"
 	},
 	"database":{
 		"pool":{
@@ -12,10 +12,11 @@
 		},
 		"connection":{
 			"config":{
-				"database": "database_name",
-				"user": "database_username",
+				"database": "music_db",
+				"user": "cjortanez",
 				"host": "localhost",
-				"port": 8889
+				"port": 8889,
+				"password": ""
 			}
 		}
 	}
