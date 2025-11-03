@@ -5,20 +5,101 @@ from Music_Streaming_Playlist_System.service_layer.app_services import AppServic
 import inspect
 import json
 
+"""User interface for Music Streaming Playlist System."""
+
+from Music_Streaming_Playlist_System.application_base import ApplicationBase
+
 class UserInterface(ApplicationBase):
-    """UserInterface Class Definition."""
-    def __init__(self, config:dict)->None:
-        """Initializes object. """
-        self._config_dict = config
+    def __init__(self, services, config):
+        self._services = services
         self.META = config["meta"]
-        super().__init__(subclass_name=self.__class__.__name__, 
-				   logfile_prefix_name=self.META["log_prefix"])
-        self.DB = AppServices(config)
-        self._logger.log_debug(f'{inspect.currentframe().f_code.co_name}:It works!')
+
+        super().__init__(
+            subclass_name=self.__class__.__name__,
+            logfile_prefix_name=self.META["log_prefix"]
+        )
+        self._logger.log_debug("__init__:It works!")
 
 
 
 
     def start(self):
-        """Start main user interface."""
-        self._logger.log_debug(f'{inspect.currentframe().f_code.co_name}: User interface started!')
+        """Start simple CLI interface."""
+        self._logger.log_debug("start: User interface started!")
+        print("\n🎵 Welcome to the Music Streaming Playlist System 🎵")
+
+        while True:
+            print("""
+            ==============================
+            1. View all songs
+            2. View all playlists
+            3. View songs in a playlist
+            4. Add a song
+            5. Create playlist
+            6. Add song to playlist
+            0. Exit
+            ==============================
+            """)
+            choice = input("Select an option: ")
+
+            if choice == "1":
+                self.view_all_songs()
+            elif choice == "2":
+                self.view_all_playlists()
+            elif choice == "3":
+                self.view_songs_in_playlist()
+            elif choice == "4":
+                self.add_song()
+            elif choice == "5":
+                self.create_playlist()
+            elif choice == "6":
+                self.add_song_to_playlist()
+            elif choice == "0":
+                print("Goodbye!")
+                break
+            else:
+                print("Invalid option. Try again!")
+
+    # ---- Menu Actions ----
+    def view_all_songs(self):
+        songs = self._services.get_all_songs()
+        print("\n--- Songs ---")
+        for s in songs:
+            print(f"{s[0]} | {s[1]} | {s[2]} | {s[3]} | {s[4]}")
+
+    def view_all_playlists(self):
+        playlists = self._services.get_all_playlists()
+        print("\n--- Playlists ---")
+        for p in playlists:
+            print(f"{p[0]} | {p[1]} | {p[2]}")
+
+    def view_songs_in_playlist(self):
+        playlist_id = input("Enter playlist ID: ")
+        songs = self._services.get_songs_by_playlist(int(playlist_id))
+        print(f"\n--- Songs in Playlist {playlist_id} ---")
+        for s in songs:
+            print(f"{s[0]} | {s[1]} | {s[2]}")
+
+    def add_song(self):
+        title = input("Title: ")
+        artist = input("Artist: ")
+        album = input("Album: ")
+        duration = input("Duration (e.g., 3:30): ")
+
+        song_id = self._services.add_song(title, artist, album, duration)
+        print(f"Added song ID: {song_id}")
+
+    def create_playlist(self):
+        name = input("Playlist name: ")
+        desc = input("Description: ")
+        pid = self._services.create_playlist(name, desc)
+        print(f"Created playlist ID: {pid}")
+
+    def add_song_to_playlist(self):
+        pid = input("Playlist ID: ")
+        sid = input("Song ID: ")
+        self._services.add_song_to_playlist(int(pid), int(sid))
+        print("Song added to playlist")
+
+
+
