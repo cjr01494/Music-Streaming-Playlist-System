@@ -70,21 +70,47 @@ class UserInterface(ApplicationBase):
     def view_all_songs(self):
         songs = self._services.get_all_songs()
         print("\n--- Songs ---")
+        print(f"{'ID':<5} {'Title':<30} {'Artist':<35} {'Album':<40} {'Duration':<10}")
+        print("-" * 125)
+
         for s in songs:
-            print(f"{s[0]} | {s[1]} | {s[2]} | {s[3]} | {s[4]}")
+            print(f"{s[0]:<5} {s[1]:<30} {s[2]:<35} {s[3]:<40} {s[4]:<10}")
+
 
     def view_all_playlists(self):
         playlists = self._services.get_all_playlists()
         print("\n--- Playlists ---")
+        print(f"{'ID':<5} {'Name':<35} {'Description':<60}")
+        print("-" * 100)
         for p in playlists:
-            print(f"{p[0]} | {p[1]} | {p[2]}")
+            print(f"{p[0]:<5} {p[1]:<35} {p[2]:<60}")
+
+
 
     def view_songs_in_playlist(self):
         playlist_id = input("Enter playlist ID: ")
         songs = self._services.get_songs_by_playlist(int(playlist_id))
+
         print(f"\n--- Songs in Playlist {playlist_id} ---")
+
+        # Header row with larger Artist and Album widths
+        print(f"{'ID':<5} {'Title':<30} {'Artist':<35} {'Album':<40} {'Duration':<10}")
+        print("-" * 125)
+
+        if not songs:
+            print("No songs found in this playlist.")
+            return
+
         for s in songs:
-            print(f"{s[0]} | {s[1]} | {s[2]}")
+            # Some SELECT queries may not include album/duration depending on your join
+            # So we handle missing indexes gracefully
+            title = s[1] if len(s) > 1 else ""
+            artist = s[2] if len(s) > 2 else ""
+            album = s[3] if len(s) > 3 else ""
+            duration = s[4] if len(s) > 4 else ""
+
+            print(f"{s[0]:<5} {title:<30} {artist:<35} {album:<40} {duration:<10}")
+
 
     def add_song(self):
         title = input("Title: ")

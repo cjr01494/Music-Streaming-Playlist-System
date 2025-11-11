@@ -48,11 +48,11 @@ class MySQLPersistenceWrapper(ApplicationBase):
         )
 
         self.SELECT_SONGS_BY_PLAYLIST_ID = """
-        SELECT s.id, s.title, s.artist
+        SELECT s.id, s.title, s.artist, s.album, s.duration
         FROM songs s
         JOIN playlist_song_xref x ON s.id = x.song_id
         WHERE x.playlist_id = %s
-        ORDER BY s.title
+        ORDER BY s.id
         """
 
         self.INSERT_SONG = (
