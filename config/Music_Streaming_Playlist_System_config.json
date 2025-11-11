@@ -13,7 +13,7 @@
 		"connection":{
 			"config":{
 				"database": "music_db",
-				"user": "cjortanez",
+				"user": "music_db_user",
 				"host": "localhost",
 				"port": 8889
 			}

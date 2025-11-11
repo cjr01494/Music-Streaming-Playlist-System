@@ -1,14 +1,30 @@
-/* Drop the user first if it already exists */
-DROP USER IF EXISTS 'cjortanez'@'localhost';
+/* ******************************************
+   Drop and create the music_db_user account
+   ********************************************/
 
-/* Create a new user for the Music Streaming Playlist System */
-CREATE USER 'cjortanez'@'localhost' IDENTIFIED BY '';
+/* Drop user if exists */
+DROP USER IF EXISTS 'music_db_user'@'%';
 
-/* Grant privileges to manage the music_db schema */
-GRANT ALL PRIVILEGES ON music_db.* TO 'cjortanez'@'localhost' WITH GRANT OPTION;
+/* Create user if not exists */
+CREATE USER IF NOT EXISTS 'music_db_user'@'%' IDENTIFIED BY '';
 
-/* Apply changes immediately */
+/* Grant full privileges on all databases and objects */
+GRANT ALL PRIVILEGES ON *.* TO 'music_db_user'@'%';
+
+/* Configure user resource limits */
+ALTER USER 'music_db_user'@'%'
+  REQUIRE NONE
+  WITH
+  MAX_QUERIES_PER_HOUR 0
+  MAX_CONNECTIONS_PER_HOUR 0
+  MAX_UPDATES_PER_HOUR 0
+  MAX_USER_CONNECTIONS 0;
+
+/* Grant privileges specifically on music_db */
+GRANT ALL PRIVILEGES ON `music_db`.* TO 'music_db_user'@'%' WITH GRANT OPTION;
+
+/* Apply changes */
 FLUSH PRIVILEGES;
 
-/* Optional: verify */
-SELECT user, host FROM mysql.user WHERE user = 'cjortanez';
+/* Verify the new user */
+SELECT user, host FROM mysql.user WHERE user = 'music_db_user';

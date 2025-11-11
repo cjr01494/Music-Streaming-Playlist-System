@@ -1,0 +1,151 @@
+DEBUG:MySQLPersistenceWrapper:2025-11-02 19:30:09,731:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 19:30:09,732:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 19:30:09,732:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 19:30:09,813:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 19:30:09,817:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 19:30:09,817:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 19:30:09,817:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 19:30:09,844:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2025-11-02 19:30:09,844:__init__:It works!
+DEBUG:UserInterface:2025-11-02 19:30:09,844:__init__:It works!
+DEBUG:UserInterface:2025-11-02 19:30:09,844:start: User interface started!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 19:58:33,948:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 19:58:33,948:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 19:58:33,948:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 19:58:34,029:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:01:38,550:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:01:38,550:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:01:38,550:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:01:38,621:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:07:51,867:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:07:51,867:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:07:51,867:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:07:51,932:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:10:04,630:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:10:04,630:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:10:04,630:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:10:04,705:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:11:50,495:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:11:50,495:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:11:50,495:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:11:50,569:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:16:08,612:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:16:08,612:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:16:08,612:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:16:08,678:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:17:03,033:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:17:03,033:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:17:03,033:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:17:03,097:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:21:32,277:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:21:32,277:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:21:32,278:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:21:32,354:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:23:03,332:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:23:03,332:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:23:03,333:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:23:03,396:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:24:36,739:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:24:36,739:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:24:36,739:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:24:36,814:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:25:33,812:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:25:33,812:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:25:33,812:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:25:33,878:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:28:10,463:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:28:10,463:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:28:10,463:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:28:10,544:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:32:18,508:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:32:18,508:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:32:18,508:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:32:18,577:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:33:45,627:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:33:45,627:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:33:45,627:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:33:45,694:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:33:45,696:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:33:45,696:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:33:45,696:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:33:45,745:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:34:57,014:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:34:57,014:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:34:57,014:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:34:57,079:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:35:14,219:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:35:14,219:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:35:14,219:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:35:14,289:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:38:34,732:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:38:34,732:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:38:34,732:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:38:34,811:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:41:49,207:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:41:49,208:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:41:49,208:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:41:49,281:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:42:49,125:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:42:49,125:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:42:49,125:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:42:49,191:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:44:44,765:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:44:44,765:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:44:44,765:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:44:44,832:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:49:43,341:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:49:43,342:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:49:43,342:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:49:43,413:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:50:39,145:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:50:39,145:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:50:39,145:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:50:39,206:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:UserInterface:2025-11-02 20:50:39,208:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:50:53,835:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:50:53,835:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:50:53,835:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:50:53,896:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:UserInterface:2025-11-02 20:50:53,898:__init__:It works!
+DEBUG:UserInterface:2025-11-02 20:50:53,898:start: User interface started!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:53:18,397:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:53:18,398:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:53:18,398:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:53:18,477:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:UserInterface:2025-11-02 20:53:18,478:__init__:It works!
+DEBUG:UserInterface:2025-11-02 20:53:18,478:start: User interface started!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:55:21,979:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:55:21,980:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:55:21,980:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:55:22,045:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:56:05,067:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:56:05,067:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:56:05,067:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:56:05,131:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:UserInterface:2025-11-02 20:56:05,131:__init__:It works!
+DEBUG:UserInterface:2025-11-02 20:56:05,131:start: User interface started!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:58:37,887:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:58:37,887:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:58:37,887:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 20:58:37,957:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:UserInterface:2025-11-02 20:58:37,957:__init__:It works!
+DEBUG:UserInterface:2025-11-02 20:58:37,958:start: User interface started!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 21:00:09,152:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 21:00:09,152:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 21:00:09,152:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 21:00:09,224:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:UserInterface:2025-11-02 21:00:09,224:__init__:It works!
+DEBUG:UserInterface:2025-11-02 21:00:09,226:start: User interface started!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 21:00:55,551:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 21:00:55,551:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 21:00:55,551:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 21:00:55,617:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:UserInterface:2025-11-02 21:00:55,617:__init__:It works!
+DEBUG:UserInterface:2025-11-02 21:00:55,618:start: User interface started!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 21:04:05,351:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-02 21:04:05,351:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'cjortanez', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-02 21:04:05,351:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-02 21:04:05,423:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2025-11-02 21:04:05,424:__init__: It works!
+DEBUG:UserInterface:2025-11-02 21:04:05,424:__init__:It works!
+DEBUG:UserInterface:2025-11-02 21:04:05,425:start: User interface started!

@@ -1,50 +1,73 @@
+/* *************************************************************
+   Drop and Create the tables for the music_db database.
+   ************************************************************* */
+
+-- Switch to the music_db database
 USE `music_db`;
 
-/*Drop playlist_song_xref table if exists
-NEED to Drop first since it refernces other tables*/
+
+/* =============================================================
+   Drop existing tables in reverse dependency order
+   ============================================================= */
+
+-- Drop cross-reference table first (depends on playlists & songs)
 DROP TABLE IF EXISTS `playlist_song_xref`;
 
-
-/*Drop songs table if exists*/
+-- Drop base tables
 DROP TABLE IF EXISTS `songs`;
-/*Drop playlists table if exists*/
 DROP TABLE IF EXISTS `playlists`;
 
-/*Drop songs table if exists*/
-/*DROP TABLE IF EXISTS `songs`;*/
 
-/* Create songs table*/
-CREATE TABLE songs (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  title VARCHAR(100) NOT NULL,
-  artist VARCHAR(100) NOT NULL,
-  album VARCHAR(100),
-  duration VARCHAR(10)
+/* =============================================================
+   Create the songs table
+   ============================================================= */
+
+CREATE TABLE IF NOT EXISTS `songs` (
+  `id` INT(11) NOT NULL,
+  `title` VARCHAR(100) NOT NULL,
+  `artist` VARCHAR(100) NOT NULL,
+  `album` VARCHAR(100),
+  `duration` VARCHAR(10)
 );
 
-/*Drop playlists table if exists*/
-/*DROP TABLE IF EXISTS `playlists`;*/
+-- Designate the `id` column as the primary key
+ALTER TABLE `songs`
+  ADD PRIMARY KEY (`id`);
+
+-- Make `id` column auto-increment on inserts
+ALTER TABLE `songs`
+  MODIFY `id` INT(11) NOT NULL AUTO_INCREMENT;
 
 
-/* Create playlists table*/
-CREATE TABLE playlists (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(100) NOT NULL,
-  description VARCHAR(255)
+/* =============================================================
+   Create the playlists table
+   ============================================================= */
+
+CREATE TABLE IF NOT EXISTS `playlists` (
+  `id` INT(11) NOT NULL,
+  `name` VARCHAR(100) NOT NULL UNIQUE,
+  `description` VARCHAR(255)
 );
 
+-- Designate the `id` column as the primary key
+ALTER TABLE `playlists`
+  ADD PRIMARY KEY (`id`);
 
-/*Drop playlist_song_xref table if exists*/
-/*DROP TABLE IF EXISTS `playlist_song_xref`;*/
+-- Make `id` column auto-increment on inserts
+ALTER TABLE `playlists`
+  MODIFY `id` INT(11) NOT NULL AUTO_INCREMENT;
 
 
-/* Create playlist_song_xref table*/
-CREATE TABLE playlist_song_xref (
-  playlist_id INT NOT NULL,
-  song_id INT NOT NULL,
-  PRIMARY KEY (playlist_id, song_id),
-  FOREIGN KEY (playlist_id) REFERENCES playlists(id)
+/* =============================================================
+   Create the playlist_song_xref table (junction table)
+   ============================================================= */
+
+CREATE TABLE IF NOT EXISTS `playlist_song_xref` (
+  `playlist_id` INT(11) NOT NULL,
+  `song_id` INT(11) NOT NULL,
+  PRIMARY KEY (`playlist_id`, `song_id`),
+  FOREIGN KEY (`playlist_id`) REFERENCES `playlists`(`id`)
       ON DELETE CASCADE ON UPDATE CASCADE,
-  FOREIGN KEY (song_id) REFERENCES songs(id)
+  FOREIGN KEY (`song_id`) REFERENCES `songs`(`id`)
       ON DELETE CASCADE ON UPDATE CASCADE
 );
