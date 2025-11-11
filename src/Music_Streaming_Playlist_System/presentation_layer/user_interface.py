@@ -37,6 +37,8 @@ class UserInterface(ApplicationBase):
             4. Add a song
             5. Create playlist
             6. Add song to playlist
+            7. Delete a song
+            8. Delete a playlist
             0. Exit
             ==============================
             """)
@@ -54,6 +56,10 @@ class UserInterface(ApplicationBase):
                 self.create_playlist()
             elif choice == "6":
                 self.add_song_to_playlist()
+            elif choice == "7":
+                self.delete_song()
+            elif choice == "8":
+                self.delete_playlist()
             elif choice == "0":
                 print("Goodbye!")
                 break
@@ -100,6 +106,39 @@ class UserInterface(ApplicationBase):
         sid = input("Song ID: ")
         self._services.add_song_to_playlist(int(pid), int(sid))
         print("Song added to playlist")
+
+    def delete_song(self):
+        print("\n--- Delete Song ---")
+        songs = self._services.get_all_songs()
+        if not songs:
+            print("No songs available.")
+            return
+        for song in songs:
+            print(f"{song[0]} | {song[1]} by {song[2]}")
+
+        try:
+            song_id = int(input("Enter the song ID to delete: "))
+            self._services.delete_song_by_id(song_id)
+            print("Song deleted successfully!")
+        except Exception as e:
+            print(f"Error deleting song: {e}")
+
+
+    def delete_playlist(self):
+        print("\n--- Delete Playlist ---")
+        playlists = self._services.get_all_playlists()
+        if not playlists:
+            print("No playlists available.")
+            return
+        for playlist in playlists:
+            print(f"{playlist[0]} | {playlist[1]} - {playlist[2]}")
+
+        try:
+            playlist_id = int(input("Enter the playlist ID to delete: "))
+            self._services.delete_playlist_by_id(playlist_id)
+            print("Playlist deleted successfully!")
+        except Exception as e:
+            print(f"Error deleting playlist: {e}")
 
 
 

@@ -177,6 +177,74 @@ class MySQLPersistenceWrapper(ApplicationBase):
             self._logger.log_error(f'add_song_to_playlist: {e}')
 
     # -------------------------------------------------------
+    # Delete Methods
+    # -------------------------------------------------------
+    def delete_song_by_id(self, song_id):
+        """Deletes a song by its ID."""
+        connection = None
+        cursor = None
+        try:
+            connection = self.get_connection()
+            cursor = connection.cursor()
+            cursor.execute("DELETE FROM songs WHERE id = %s", (song_id,))
+            connection.commit()
+            self._logger.log_debug(f"Deleted song ID {song_id} successfully.")
+        except Exception as e:
+            self._logger.log_error(f"delete_song_by_id: {e}")
+            raise
+        finally:
+            if cursor:
+                cursor.close()
+            if connection:
+                connection.close()
+
+    def delete_playlist_by_id(self, playlist_id):
+        """Deletes a playlist by its ID."""
+        connection = None
+        cursor = None
+        try:
+            connection = self.get_connection()
+            cursor = connection.cursor()
+
+            # Optional: Delete associated playlist-song links before deleting the playlist
+            cursor.execute("DELETE FROM playlist_song_xref WHERE playlist_id = %s", (playlist_id,))
+            cursor.execute("DELETE FROM playlists WHERE id = %s", (playlist_id,))
+            connection.commit()
+            self._logger.log_debug(f"Deleted playlist ID {playlist_id} successfully.")
+        except Exception as e:
+            self._logger.log_error(f"delete_playlist_by_id: {e}")
+            raise
+        finally:
+            if cursor:
+                cursor.close()
+            if connection:
+                connection.close()
+
+    # -------------------------------------------------------
+    # General Query Executor (for INSERT/UPDATE/DELETE)
+    # -------------------------------------------------------
+    def execute_non_query(self, query, params=None):
+        """Executes INSERT, UPDATE, or DELETE statements."""
+        connection = None
+        cursor = None
+        try:
+            connection = self.get_connection()
+            cursor = connection.cursor()
+            cursor.execute(query, params)
+            connection.commit()
+            self._logger.log_debug(f"Query executed successfully: {query}")
+        except Exception as e:
+            self._logger.log_error(f"execute_non_query: {e}")
+            raise
+        finally:
+            if cursor:
+                cursor.close()
+            if connection:
+                connection.close()
+
+
+
+    # -------------------------------------------------------
     # Connection Pool Initialization
     # -------------------------------------------------------
     def _initialize_database_connection_pool(self, config: dict) -> MySQLConnectionPool:

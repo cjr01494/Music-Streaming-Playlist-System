@@ -38,3 +38,9 @@ class AppServices(ApplicationBase):
 
     def get_songs_by_playlist(self, playlist_id: int):
         return self._db.select_songs_by_playlist_id(playlist_id)
+
+    def delete_song_by_id(self, song_id):
+        return self._db.delete_song_by_id(song_id)
+
+    def delete_playlist_by_id(self, playlist_id):
+        return self._db.delete_playlist_by_id(playlist_id)
