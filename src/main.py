@@ -17,7 +17,7 @@ def main():
 
     with open(args.configfile, 'r') as f:
         config = json.loads(f.read())
-        print(config)
+        #print(config)
 
     # Create DB Connection Wrapper
     db = MySQLPersistenceWrapper(config)

@@ -6,4 +6,8 @@ cd database
 cd ..
 
 echo "Starting application..."
+clear
+
 pipenv run python3 src/main.py -c config/Music_Streaming_Playlist_System_config.json
+
+
