@@ -1,0 +1,43 @@
+DEBUG:MySQLPersistenceWrapper:2025-11-17 19:05:54,138:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-17 19:05:54,138:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'music_db_user', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-17 19:05:54,138:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-17 19:05:54,237:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2025-11-17 19:05:54,237:__init__: It works!
+DEBUG:UserInterface:2025-11-17 19:05:54,237:__init__:It works!
+DEBUG:UserInterface:2025-11-17 19:05:54,241:start: User interface started!
+ERROR:MySQLPersistenceWrapper:2025-11-17 19:08:09,574:add_song_to_playlist: 1062 (23000): Duplicate entry '3-1' for key 'playlist_song_xref.PRIMARY'
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:17:59,421:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:17:59,421:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'music_db_user', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:17:59,421:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:17:59,527:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2025-11-17 20:17:59,527:__init__: It works!
+DEBUG:UserInterface:2025-11-17 20:17:59,527:__init__:It works!
+DEBUG:UserInterface:2025-11-17 20:17:59,529:start: User interface started!
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:32:57,118:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:32:57,118:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'music_db_user', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:32:57,118:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:32:57,180:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2025-11-17 20:32:57,181:__init__: It works!
+DEBUG:UserInterface:2025-11-17 20:32:57,181:__init__:It works!
+DEBUG:UserInterface:2025-11-17 20:32:57,182:start: User interface started!
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:38:45,832:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:38:45,833:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'music_db_user', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:38:45,833:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:38:45,915:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2025-11-17 20:38:45,916:__init__: It works!
+DEBUG:UserInterface:2025-11-17 20:38:45,916:__init__:It works!
+DEBUG:UserInterface:2025-11-17 20:38:45,917:start: User interface started!
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:51:08,365:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:51:08,365:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'music_db_user', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:51:08,365:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-17 20:51:08,430:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2025-11-17 20:51:08,430:__init__: It works!
+DEBUG:UserInterface:2025-11-17 20:51:08,430:__init__:It works!
+DEBUG:UserInterface:2025-11-17 20:51:08,432:start: User interface started!
+DEBUG:MySQLPersistenceWrapper:2025-11-17 21:12:22,253:__init__:It works!
+DEBUG:MySQLPersistenceWrapper:2025-11-17 21:12:22,253:__init__: DB Connection Config Dict: {'database': 'music_db', 'user': 'music_db_user', 'host': 'localhost', 'port': 8889, 'password': ''}
+DEBUG:MySQLPersistenceWrapper:2025-11-17 21:12:22,253:Creating connection pool...
+DEBUG:MySQLPersistenceWrapper:2025-11-17 21:12:22,336:_initialize_database_connection_pool: Connection pool successfully created!
+DEBUG:AppServices:2025-11-17 21:12:22,337:__init__: It works!
+DEBUG:UserInterface:2025-11-17 21:12:22,337:__init__:It works!
+DEBUG:UserInterface:2025-11-17 21:12:22,339:start: User interface started!
