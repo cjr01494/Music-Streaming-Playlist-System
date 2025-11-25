@@ -18,15 +18,23 @@ class UserInterface(ApplicationBase):
             subclass_name=self.__class__.__name__,
             logfile_prefix_name=self.META["log_prefix"]
         )
-        self._logger.log_debug("__init__:It works!")
+        #error tester
+        #self._logger.log_debug("__init__:It works!")
 
 
+    def get_non_empty(self,prompt):
+        while True:
+            value = input(prompt).strip()
+            if value:
+                return value
+            print("Input cannot be empty.")
 
 
     def start(self):
         """Start simple CLI interface."""
-        self._logger.log_debug("start: User interface started!")
-        print("\n🎵 Welcome to the Music Streaming Playlist System 🎵")
+        #error tester
+        #self._logger.log_debug("start: User interface started!")
+        print("\nWelcome to the Music Streaming Playlist System")
 
         while True:
             print("""
@@ -88,10 +96,31 @@ class UserInterface(ApplicationBase):
 
 
     def view_songs_in_playlist(self):
-        playlist_id = input("Enter playlist ID: ")
-        songs = self._services.get_songs_by_playlist(int(playlist_id))
+        playlists = self._services.get_all_playlists()
+        print("\n--- Playlists ---")
+        print(f"{'ID':<5} {'Name':<35} {'Description':<60}")
+        print("-" * 100)
+        for p in playlists:
+            print(f"{p[0]:<5} {p[1]:<35} {p[2]:<60}")
+        #playlist_id = input("\nEnter playlist ID: ")
+        # Loop until valid playlist ID is chosen
+        valid_ids = [p[0] for p in playlists]   # first element is ID
 
-        print(f"\n--- Songs in Playlist {playlist_id} ---")
+        while True:
+            try:
+                playlist_id = int(input("\nEnter playlist ID: "))
+                if playlist_id in valid_ids:
+                    break
+                else:
+                    print("Invalid playlist ID. Please choose one from the list.")
+            except ValueError:
+                print("Please enter a valid number.")
+
+        songs = self._services.get_songs_by_playlist(int(playlist_id))
+        # Find playlist name from playlists list
+        playlist_name = next((p[1] for p in playlists if p[0] == playlist_id), "Unknown")
+
+        print(f"\n--- Songs in Playlist, {playlist_name}  ---")
 
         # Header row with larger Artist and Album widths
         print(f"{'ID':<5} {'Title':<30} {'Artist':<35} {'Album':<40} {'Duration':<10}")
@@ -113,58 +142,107 @@ class UserInterface(ApplicationBase):
 
 
     def add_song(self):
-        title = input("Title: ")
-        artist = input("Artist: ")
-        album = input("Album: ")
-        duration = input("Duration (e.g., 3:30): ")
+        title = self.get_non_empty("Title: ")
+        artist = self.get_non_empty("Artist: ")
+        album = self.get_non_empty("Album: ")
+        duration = self.get_non_empty("Duration (e.g., 3:30): ")
 
         song_id = self._services.add_song(title, artist, album, duration)
         print(f"Added song ID: {song_id}")
 
     def create_playlist(self):
-        name = input("Playlist name: ")
-        desc = input("Description: ")
+        name = self.get_non_empty("Playlist name: ")
+        desc = self.get_non_empty("Description: ")
         pid = self._services.create_playlist(name, desc)
         print(f"Created playlist ID: {pid}")
 
     def add_song_to_playlist(self):
-        pid = input("Playlist ID: ")
-        sid = input("Song ID: ")
+        songs = self._services.get_all_songs()
+        print("\n--- Songs ---")
+        print(f"{'ID':<5} {'Title':<30} {'Artist':<35} {'Album':<40} {'Duration':<10}")
+        print("-" * 125)
+
+        for s in songs:
+            print(f"{s[0]:<5} {s[1]:<30} {s[2]:<35} {s[3]:<40} {s[4]:<10}")
+
+        sid = self.get_non_empty("\nSong ID: ")
+
+        playlists = self._services.get_all_playlists()
+        print("\n--- Playlists ---")
+        print(f"{'ID':<5} {'Name':<35} {'Description':<60}")
+        print("-" * 100)
+        for p in playlists:
+            print(f"{p[0]:<5} {p[1]:<35} {p[2]:<60}")
+
+        pid = self.get_non_empty("\nPlaylist ID: ")
+        #sid = self.get_non_empty("Song ID: ")
         self._services.add_song_to_playlist(int(pid), int(sid))
         print("Song added to playlist")
 
     def delete_song(self):
-        print("\n--- Delete Song ---")
+        print("\n––– Delete Song –––")
         songs = self._services.get_all_songs()
+
         if not songs:
             print("No songs available.")
             return
+
         for song in songs:
             print(f"{song[0]} | {song[1]} by {song[2]}")
 
+        valid_ids = [s[0] for s in songs]   # extract all song IDs
+
+         # validation loop
+        while True:
+            try:
+                song_id = int(input("\nEnter the song ID to delete: "))
+                if song_id in valid_ids:
+                    break
+                else:
+                    print("\nInvalid song ID. Please choose one from the list.")
+            except ValueError:
+                print("\nPlease enter a valid number.")
+
         try:
-            song_id = int(input("Enter the song ID to delete: "))
             self._services.delete_song_by_id(song_id)
-            print("Song deleted successfully!")
+            print("Song deleted successfully!\n")
         except Exception as e:
             print(f"Error deleting song: {e}")
 
 
+
     def delete_playlist(self):
-        print("\n--- Delete Playlist ---")
+        print("\n––– Delete Playlist –––")
         playlists = self._services.get_all_playlists()
+
         if not playlists:
             print("No playlists available.")
             return
+
         for playlist in playlists:
             print(f"{playlist[0]} | {playlist[1]} - {playlist[2]}")
 
+        valid_ids = [p[0] for p in playlists]
+
+       # validation loop
+        while True:
+            user_input = input("\nEnter the playlist ID to delete: ").strip()
+            try:
+                playlist_id = int(user_input)
+
+                if playlist_id in valid_ids:
+                    break
+                else:
+                    print("Invalid playlist ID. Choose one from the list.")
+            except ValueError:
+                print("Please enter a valid number.")
+
         try:
-            playlist_id = int(input("Enter the playlist ID to delete: "))
             self._services.delete_playlist_by_id(playlist_id)
             print("Playlist deleted successfully!")
         except Exception as e:
             print(f"Error deleting playlist: {e}")
+
 
 
 

@@ -8,7 +8,7 @@ set -e  # Stop script if any command fails
 # Move to directory where this script is located
 cd "$(dirname "$0")"
 
-# MySQL binary (MAMP 8.0)
+# MySQL 
 MYSQL="/Applications/MAMP/Library/bin/mysql80/bin/mysql"
 
 HOST="localhost"

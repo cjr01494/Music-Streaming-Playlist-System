@@ -17,7 +17,8 @@ class AppServices(ApplicationBase):
             subclass_name=self.__class__.__name__,
             logfile_prefix_name=self.META["log_prefix"]
         )
-        self._logger.log_debug("__init__: It works!")
+        #Do not need to print anymore
+        #self._logger.log_debug("__init__: It works!")
 
     # ---- Song Services ----
     def get_all_songs(self):

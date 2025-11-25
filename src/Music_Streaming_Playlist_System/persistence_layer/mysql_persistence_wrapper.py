@@ -20,7 +20,8 @@ class MySQLPersistenceWrapper(ApplicationBase):
             subclass_name=self.__class__.__name__,
             logfile_prefix_name=self.META["log_prefix"]
         )
-        self._logger.log_debug(f'{inspect.currentframe().f_code.co_name}:It works!')
+        #error msg
+        #self._logger.log_debug(f'{inspect.currentframe().f_code.co_name}:It works!')
 
         # Database Configuration Constants
         self.DB_CONFIG = {
@@ -31,9 +32,9 @@ class MySQLPersistenceWrapper(ApplicationBase):
             "password": self.DATABASE["connection"]["config"].get("password", "")
         }
 
-        self._logger.log_debug(
-            f'{inspect.currentframe().f_code.co_name}: DB Connection Config Dict: {self.DB_CONFIG}'
-        )
+        # self._logger.log_debug(
+        #     f'{inspect.currentframe().f_code.co_name}: DB Connection Config Dict: {self.DB_CONFIG}'
+        # )
 
         # Database Connection Pool
         self._connection_pool = self._initialize_database_connection_pool(self.DB_CONFIG)
@@ -188,7 +189,7 @@ class MySQLPersistenceWrapper(ApplicationBase):
             cursor = connection.cursor()
             cursor.execute("DELETE FROM songs WHERE id = %s", (song_id,))
             connection.commit()
-            self._logger.log_debug(f"Deleted song ID {song_id} successfully.")
+            #self._logger.log_debug(f"Deleted song ID {song_id} successfully.")
         except Exception as e:
             self._logger.log_error(f"delete_song_by_id: {e}")
             raise
@@ -210,7 +211,7 @@ class MySQLPersistenceWrapper(ApplicationBase):
             cursor.execute("DELETE FROM playlist_song_xref WHERE playlist_id = %s", (playlist_id,))
             cursor.execute("DELETE FROM playlists WHERE id = %s", (playlist_id,))
             connection.commit()
-            self._logger.log_debug(f"Deleted playlist ID {playlist_id} successfully.")
+            #self._logger.log_debug(f"Deleted playlist ID {playlist_id} successfully.")
         except Exception as e:
             self._logger.log_error(f"delete_playlist_by_id: {e}")
             raise
@@ -250,16 +251,16 @@ class MySQLPersistenceWrapper(ApplicationBase):
     def _initialize_database_connection_pool(self, config: dict) -> MySQLConnectionPool:
         """Initializes database connection pool."""
         try:
-            self._logger.log_debug(f'Creating connection pool...')
+            #self._logger.log_debug(f'Creating connection pool...')
             cnx_pool = MySQLConnectionPool(
                 pool_name=self.DATABASE["pool"]["name"],
                 pool_size=self.DATABASE["pool"]["size"],
                 pool_reset_session=self.DATABASE["pool"]["reset_session"],
                 **config
             )
-            self._logger.log_debug(
-                f'{inspect.currentframe().f_code.co_name}: Connection pool successfully created!'
-            )
+            # self._logger.log_debug(
+            #     f'{inspect.currentframe().f_code.co_name}: Connection pool successfully created!'
+            # )
             return cnx_pool
         except connector.Error as err:
             self._logger.log_error(f'Error creating connection pool: {err}')

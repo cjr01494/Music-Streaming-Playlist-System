@@ -8,7 +8,8 @@ from Music_Streaming_Playlist_System.presentation_layer.user_interface import Us
 from Music_Streaming_Playlist_System.persistence_layer.mysql_persistence_wrapper import MySQLPersistenceWrapper
 from Music_Streaming_Playlist_System.service_layer.app_services import AppServices
 
-print(">>> MAIN IMPORTED WRAPPER FROM:", inspect.getfile(MySQLPersistenceWrapper))
+#error that was fixed to find double wrapper
+#print(">>> MAIN IMPORTED WRAPPER FROM:", inspect.getfile(MySQLPersistenceWrapper))
 
 def main():
     """Entry point."""
@@ -28,20 +29,20 @@ def main():
     # UI
     ui = UserInterface(services, config)
 
-    print(f"{inspect.currentframe().f_code.co_name}: Starting User Interface")
+    # print(f"{inspect.currentframe().f_code.co_name}: Starting User Interface")
 
-    # personal pref on where the tables are printed 
-    #ui.start()
+    # # personal pref on where the tables are printed 
+    # #ui.start()
 
-    print("\n--- Database Songs Test ---")
-    songs_list = db.select_all_songs()
-    for song in songs_list:
-        print(song)
+    # print("\n--- Database Songs Test ---")
+    # songs_list = db.select_all_songs()
+    # for song in songs_list:
+    #     print(song)
 
-    print("\n--- Database Playlists Test ---")
-    playlists_list = db.select_all_playlists()   
-    for pl in playlists_list:
-        print(pl)
+    # print("\n--- Database Playlists Test ---")
+    # playlists_list = db.select_all_playlists()   
+    # for pl in playlists_list:
+    #     print(pl)
 
     ui.start()
 
